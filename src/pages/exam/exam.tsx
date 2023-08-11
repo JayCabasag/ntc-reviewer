@@ -4,8 +4,8 @@ import data from "../../data.json"
 import { Question } from "../../utils/types";
 import QuestionListings from "../../components/compositions/questions/QuestionListings";
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
-import { useState, useRef } from 'react'
-import { useCalculateScore, useRemoveAnswers, useScore } from "../../contexts/answer-context/context-hooks";
+import { useRef } from 'react'
+import { useCalculateScore, useExamStatus, useExamUpdateStatus, useRemoveAnswers, useScore } from "../../contexts/answer-context/context-hooks";
 
 
 export default function ExamPage() {
@@ -15,22 +15,23 @@ export default function ExamPage() {
   const navigate = useNavigate();
   const calculateScore = useCalculateScore()
   const removeAnswers = useRemoveAnswers()
+  const examStatus = useExamStatus()
+  const updateExamStatus = useExamUpdateStatus()
   const score = useScore()
 
-  const [status, setStatus] = useState<'in-progress'|'submitted'>('in-progress')
   const remarks = score <= 49 ? 'failed' : 'passed' 
   const topRef = useRef<HTMLDivElement | null>(null)
 
   const handleSubmitAnswer = () => {
     topRef.current?.scrollIntoView({ behavior: 'smooth' })
     calculateScore()
-    setStatus('submitted')
+    updateExamStatus('submitted')
   }
 
   const handleTryAgain = () => {
     topRef.current?.scrollIntoView({ behavior: 'smooth' })
     removeAnswers()
-    setStatus('in-progress')
+    updateExamStatus('in-progress')
     window.location.reload();
   }
 
@@ -47,22 +48,22 @@ export default function ExamPage() {
             Back
         </button>
         <div className="mt-4">
-          {status === 'submitted' && remarks === 'failed' && (
+          {examStatus === 'submitted' && remarks === 'failed' && (
             <div className="p-4 mb-4 text-lg text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
               <span className="font-bold">You failed!</span> score : {`${score}/100`}
             </div>
           )}
-          {status === 'submitted' && remarks === 'passed' && (
+          {examStatus === 'submitted' && remarks === 'passed' && (
             <div className="p-4 mb-4 text-lg text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
               <span className="font-bold">Congratulations!</span> score :  {`${score}/100`}
             </div>
           )}
-          {status === 'in-progress' && (
+          {examStatus === 'in-progress' && (
             <div className="p-4 mb-4 text-lg text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
               <span className="font-bold">Warning!</span> Do not refresh page to prevent answer lose.
             </div>
           )}
-          {status !== 'in-progress' && (
+          {examStatus !== 'in-progress' && (
              <button 
                 type="button"
                 onClick={handleTryAgain}
