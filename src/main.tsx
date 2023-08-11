@@ -9,6 +9,7 @@ import CheckScorePage from './pages/check-score/CheckScore.tsx';
 import Root from './components/layouts/RootLayout.tsx';
 import HomePage from './pages/home/home.tsx';
 import ElementPage from './pages/element/ElementPage.tsx';
+import { AnswerContextProvider } from './contexts/answer-context/AnswerContext.tsx';
 
 const router = createBrowserRouter([
     {
@@ -60,7 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
-
+    <AnswerContextProvider>
+      <RouterProvider router={router}/>
+    </AnswerContextProvider>
   </React.StrictMode>,
 )

@@ -19,3 +19,5 @@ export type Question = {
 export type AnsweredQuestion = {
     userAnswer: number
 } & Question
+
+export type ExamStatus = 'in-progress' | 'submitted'

@@ -8,9 +8,6 @@ interface ComponentProps {
 }
 
 export default function QuestionListings({ questions, type } : ComponentProps ) {
-
-  console.log(type)
-
   if (type === 'for-exam') {
     return (
       <div className='max-w-7xl'>

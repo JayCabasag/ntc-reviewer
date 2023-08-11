@@ -1,27 +1,33 @@
-import { Question } from "../../../utils/types"
-import { useState } from 'react'
+import { AnsweredQuestion, Question } from "../../../utils/types"
+import { useState, memo } from 'react'
 import { EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons'
+import { useAnswers, useUpdateAnswers } from "../../../contexts/answer-context/context-hooks"
 
 interface ComponentProps {
     props: Question
 }
-export default function QuestionCardExam({ props } : ComponentProps) {
+const QuestionCardExam = memo(({ props }: ComponentProps) => {
   
   const { question, options } = props
+  const updateAnswers = useUpdateAnswers()
+  const answers = useAnswers()
+  const answeredQuestion = answers.find(answer => answer.id === props.id)
 
   const [hideLetters, setHideLetters] = useState(false)
-  const [selectedAnswerId, setSelectedAnswerId] = useState(0)
+  const [selectedAnswerId, setSelectedAnswerId] = useState(answeredQuestion?.id ?? 0)
+  const letters = [ 'A', 'B', 'C', 'D']
 
   const getAnswer = (id: number) => {
     const answer = options.find(option => option.id === id)
-    return answer?.label
+    return answer?.label ?? '-'
   }
-
-  const letters = [ 'A', 'B', 'C', 'D']
 
   const handleOnSelectAnswer = (id: number) => {
     setSelectedAnswerId(id)
+    const answerQuestion = { ...props, userAnswer: id } as AnsweredQuestion
+    updateAnswers(answerQuestion)
   }
+  
 
   return (
     <div className="p-4 flex flex-col gap-2">
@@ -56,10 +62,12 @@ export default function QuestionCardExam({ props } : ComponentProps) {
                 </label>
             ))}
         </div>
-        <div className="flex gap-4 p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-            <p  className="font-medium">Your answer: </p>
+        <div className="flex items-center gap-4 p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            <p className="font-bold whitespace-nowrap">Your answer: </p>
             <p>{getAnswer(selectedAnswerId)}</p>
         </div>
     </div>
   )
-}
+})
+
+export default QuestionCardExam
