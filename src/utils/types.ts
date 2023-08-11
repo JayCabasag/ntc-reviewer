@@ -10,6 +10,7 @@ export type QuestionOption = {
 }
 
 export type Question = {
+    id: number,
     question: string,
     options: QuestionOption[],
     correctAnswer: number
