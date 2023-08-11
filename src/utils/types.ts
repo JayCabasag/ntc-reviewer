@@ -15,3 +15,7 @@ export type Question = {
     options: QuestionOption[],
     correctAnswer: number
 }
+
+export type AnsweredQuestion = {
+    userAnswer: number
+} & Question

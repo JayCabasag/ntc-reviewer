@@ -5,7 +5,7 @@ import { EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons'
 interface ComponentProps {
     props: Question
 }
-export default function QuestionCard({ props } : ComponentProps) {
+export default function QuestionCardReview({ props } : ComponentProps) {
   
   const { question, options, correctAnswer } = props
   const [displayOptions, setDisplayOptions] = useState<boolean>(false)
