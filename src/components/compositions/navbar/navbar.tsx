@@ -2,25 +2,19 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <header className="border-b border-palette-lighter sticky top-0 z-20 bg-white">
-      <div className="flex items-center justify-between mx-auto max-w-6xl px-6 pb-2 pt-4 md:pt-6">
+    <header className="border-b sticky top-0 z-20 bg-white">
+      <div className="flex items-center justify-between mx-auto max-w-7xl px-6 h-[65px]">
         <Link to="/" >
           <a className=" cursor-pointer">
             <h1 className="flex no-underline">
               <span className="text-xl font-primary font-bold tracking-tight pt-1">
-                NTC Reviewer
+                NTC Reviewer (Unofficial)
               </span>
             </h1>
           </a>
         </Link>
         <div>
-          <Link
-            to="/cart"
-          >
-            <a className=" relative" aria-label="cart">
-              
-            </a>
-          </Link>
+          {/* Add Account here */}
         </div>
       </div>
     </header >
