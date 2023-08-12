@@ -36,10 +36,10 @@ export default function ExamPage() {
   }
 
   return (
-      <div className="flex justify-center items-center flex-col gap-2 md:gap-8">
+      <div className="flex justify-center items-center flex-col gap-2">
         <PageTitle text={`Element ${elementId} Exam`} />
         <div ref={topRef}></div>
-        <div className="w-full max-w-7xl p-4">
+        <div className="w-full max-w-7xl">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -47,7 +47,7 @@ export default function ExamPage() {
           <ArrowLeftIcon/>
             Back
         </button>
-        <div className="mt-4">
+        <div>
           {examStatus === 'submitted' && remarks === 'failed' && (
             <div className="p-4 mb-4 text-lg text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
               <span className="font-bold">You failed!</span> score : {`${score}/100`}
