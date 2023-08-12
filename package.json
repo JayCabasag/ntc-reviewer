@@ -1,6 +1,7 @@
 {
   "name": "ntc-reviewer-online",
   "private": true,
+  "homepage": "https://ntc-reviewer.vercel.app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
