@@ -7,7 +7,7 @@ export default function Navbar() {
         <Link to="/" >
           <a className=" cursor-pointer">
             <h1 className="flex no-underline">
-              <span className="text-xl font-primary font-bold tracking-tight pt-1">
+              <span className="text-xl text-[#212121] font-primary font-extrabold tracking-tight pt-1">
                 NTC Reviewer (Unofficial)
               </span>
             </h1>

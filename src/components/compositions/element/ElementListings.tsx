@@ -26,8 +26,11 @@ const elemetOptons = [
 
 export default function ElementListings() {
   return (
-    <div className="w-full max-w-7xl flex flex-wrap gap-4 justify-center">
-        {elemetOptons.map(element => <ElementCard key={element.link} element={element}/>)}
+    <div className="w-full max-w-7xl justify-center">
+        <h1 className="text-[#212121] font-bold text-lg md:text-xl">Available elements</h1>
+        <div className="w-full flex flex-wrap gap-4 mt-[15px]">
+          {elemetOptons.map(element => <ElementCard key={element.link} element={element}/>)}
+        </div>
     </div>
   )
 }

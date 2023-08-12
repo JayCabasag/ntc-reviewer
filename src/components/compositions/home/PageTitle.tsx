@@ -4,7 +4,8 @@ interface PageProps {
 
 function PageTitle({ text }: PageProps) {
     return (
-      <h1 className="leading-relaxed font-primary font-extrabold text-2xl md:text-4xl text-center text-palette-primary mt-4 py-2 sm:py-4">
+      <h1
+        className="text-center leading-[45px] md:leading-[60px] font-extrabold text-transparent text-4xl md:text-5xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
         {text}
       </h1>
     )
