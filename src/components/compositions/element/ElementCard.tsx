@@ -9,7 +9,7 @@ interface ComponentProps {
 function ElementCard({ element } : ComponentProps) {
   const { label, link, description } = element
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-full">
       <div className="flex items-center">
         <ReviewImageAsset height={150} width={150} />
         <Link className="pl-[15px] " to={`element/${link}`}>
