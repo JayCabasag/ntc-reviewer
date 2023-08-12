@@ -5,7 +5,12 @@ export default function ElementPage() {
   const { elementId  } = useParams()
   return (
     <div className="w-full h-full flex flex-col items-center justify-center py-12">
-       <PageTitle text={`Welcome to ${elementId}`}/>
+       <PageTitle text={`NTC Reviewer - ${elementId}`}/>
+       <p className="max-w-xl px-2 mx-auto text-center text-[14px] md:text-base text-gray-600">
+        Welcome to NTC Reviewer Unofficial! 
+        Your source for insights and information 
+        related to the National Telecommunication Commission
+      </p>
        <div className="mt-[20px] max-w-7xl w-full flex items-center justify-center flex-col">
          <p className="my-[20px]">Please select an action : </p>
         <div>
