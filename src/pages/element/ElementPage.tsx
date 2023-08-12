@@ -4,7 +4,7 @@ import PageTitle from "../../components/compositions/home/PageTitle"
 export default function ElementPage() {
   const { elementId  } = useParams()
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className="w-full h-full flex flex-col items-center justify-center py-12">
        <PageTitle text={`Welcome to ${elementId}`}/>
        <div className="mt-[20px] max-w-7xl w-full flex items-center justify-center flex-col">
          <p className="my-[20px]">Please select an action : </p>
