@@ -3,7 +3,7 @@ import Navbar from "../compositions/navbar/navbar";
 
 export default function Root() {
     return (
-      <main>
+      <main className="h-screen">
         <Navbar />
         <section>
             <Outlet />
