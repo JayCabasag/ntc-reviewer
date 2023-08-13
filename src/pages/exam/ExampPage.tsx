@@ -1,16 +1,18 @@
 import { useNavigate, useParams } from "react-router-dom";
 import PageTitle from "../../components/compositions/home/PageTitle";
-// import ReviewerList from "../../data.json"
-// import QuestionListings from "../../components/compositions/questions/QuestionListings";
+import ReviewerList from "../../data.json"
+import QuestionListings from "../../components/compositions/questions/QuestionListings";
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import { useRef } from 'react'
 import { useCalculateScore, useExamStatus, useExamUpdateStatus, useRemoveAnswers, useScore } from "../../contexts/answer-context/context-hooks";
+import { Question } from "../../utils/types";
 
+const reviewerListings: typeof ReviewerList = ReviewerList.flatMap(data => data)
 
 export default function ExamPage() {
   const { reviewerId } = useParams()
-  // const reviewerListings: typeof ReviewerList = ReviewerList.flatMap(data => Object.values(data))
-  // console.log(reviewerListings)
+  const reviewerData = reviewerListings.find(data => `${data.id}` === reviewerId)
+  const reviewerQuestions = reviewerData?.questions as Question[] ?? [] as Question[]
   const navigate = useNavigate();
   const calculateScore = useCalculateScore()
   const removeAnswers = useRemoveAnswers()
@@ -73,7 +75,7 @@ export default function ExamPage() {
           )}
         </div>
         </div>
-        {/* <QuestionListings type={'for-exam'} questions={elementTwoQuestions}/> */}
+        <QuestionListings type={'for-exam'} questions={reviewerQuestions}/>
         <div className="w-full flex items-center justify-center">
             <button 
               type="button"

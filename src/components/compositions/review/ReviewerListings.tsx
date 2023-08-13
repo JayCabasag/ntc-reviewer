@@ -4,7 +4,7 @@ import ReviewerList from "../../../data.json"
 export default function ReviewerListings() {
 
   const ReviewerListings: typeof ReviewerList = ReviewerList
-  const reviewerOptons = ReviewerListings.flatMap(data => Object.values(data))
+  const reviewerOptons = ReviewerListings.flatMap(data => data)
 
   return (
     <div className="w-full max-w-7xl justify-center">

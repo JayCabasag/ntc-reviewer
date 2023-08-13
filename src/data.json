@@ -1,6 +1,5 @@
 [
     {
-        "element-2": {
           "id": 2,
           "totalQuestions": 100,
           "label": "NTC - Element 2",
@@ -2308,6 +2307,5 @@
                 "correctAnswer": 3
               }
         ]
-        }
     }
 ]

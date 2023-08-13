@@ -1,18 +1,24 @@
 import { useNavigate, useParams } from "react-router-dom";
 import PageTitle from "../../components/compositions/home/PageTitle";
-import data from "../../data.json"
+import ReviewerList from "../../data.json"
 import { Question } from "../../utils/types";
 import QuestionListings from "../../components/compositions/questions/QuestionListings";
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 
+
+const reviewerListings: typeof ReviewerList = ReviewerList.flatMap(data => data)
+
 export default function ReviewPage() {
-  const { elementId } = useParams()
-  const elementTwoQuestions = []
+  const { reviewerId } = useParams()
+  const reviewerData = reviewerListings.find(data => `${data.id}` === reviewerId)
+  const reviewerQuestions = reviewerData?.questions as Question[] ?? [] as Question[]
   const navigate = useNavigate();
+
+  const reviewerLabel = reviewerData?.label ?? ''
   
   return (
     <div className="flex justify-center items-center flex-col gap-2 md:gap-6 pt-[30px]">
-      <PageTitle text={`${elementId} Reviewer`} />
+      <PageTitle text={`${reviewerLabel} Reviewer`} />
       <div className="w-full max-w-7xl">
       <button
         type="button"
@@ -22,7 +28,7 @@ export default function ReviewPage() {
           Back
       </button>
       </div>
-      <QuestionListings type="for-review" questions={elementTwoQuestions}/>
+      <QuestionListings type="for-review" questions={reviewerQuestions}/>
     </div>
   )
 }
