@@ -9,7 +9,7 @@ export default function Navbar() {
         <Link to="/" className="cursor-pointer" >
             <h1 className="flex no-underline items-center gap-2">
               <EloLogo className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"/>
-              <span className="text-xl text-primary font-primary font-extrabold tracking-tight pt-1">
+              <span className="text-xl tracking-widest text-primary font-primary font-extrabold pt-1">
                 ELO
               </span>
             </h1>
@@ -20,7 +20,7 @@ export default function Navbar() {
              or 
              <strong className="text-primary">Login</strong>
           </div>
-          <AvatarIcon className="h-8 w-8 cursor-pointer" />
+          <AvatarIcon className="h-8 w-8 text-primary cursor-pointer" />
         </div>
       </div>
     </header >
