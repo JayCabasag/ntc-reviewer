@@ -7,12 +7,12 @@ import { ArrowLeftIcon } from '@radix-ui/react-icons'
 
 export default function ReviewPage() {
   const { elementId } = useParams()
-  const elementTwoQuestions = data[0]['element-2'] as Question[]
+  const elementTwoQuestions = []
   const navigate = useNavigate();
   
   return (
-    <div className="flex justify-center items-center flex-col gap-2 md:gap-6">
-      <PageTitle text={`Element ${elementId} Reviewer`} />
+    <div className="flex justify-center items-center flex-col gap-2 md:gap-6 pt-[30px]">
+      <PageTitle text={`${elementId} Reviewer`} />
       <div className="w-full max-w-7xl">
       <button
         type="button"

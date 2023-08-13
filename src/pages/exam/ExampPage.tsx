@@ -1,17 +1,16 @@
 import { useNavigate, useParams } from "react-router-dom";
 import PageTitle from "../../components/compositions/home/PageTitle";
-import data from "../../data.json"
-import { Question } from "../../utils/types";
-import QuestionListings from "../../components/compositions/questions/QuestionListings";
+// import ReviewerList from "../../data.json"
+// import QuestionListings from "../../components/compositions/questions/QuestionListings";
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import { useRef } from 'react'
 import { useCalculateScore, useExamStatus, useExamUpdateStatus, useRemoveAnswers, useScore } from "../../contexts/answer-context/context-hooks";
 
 
 export default function ExamPage() {
-
-  const { elementId } = useParams()
-  const elementTwoQuestions = data[0]['element-2'] as Question[]
+  const { reviewerId } = useParams()
+  // const reviewerListings: typeof ReviewerList = ReviewerList.flatMap(data => Object.values(data))
+  // console.log(reviewerListings)
   const navigate = useNavigate();
   const calculateScore = useCalculateScore()
   const removeAnswers = useRemoveAnswers()
@@ -36,8 +35,8 @@ export default function ExamPage() {
   }
 
   return (
-      <div className="flex justify-center items-center flex-col gap-2">
-        <PageTitle text={`Element ${elementId} Exam`} />
+      <div className="flex justify-center items-center flex-col gap-2 pt-[30px]">
+        <PageTitle text={`${reviewerId} Exam`} />
         <div ref={topRef}></div>
         <div className="w-full max-w-7xl">
         <button
@@ -74,7 +73,7 @@ export default function ExamPage() {
           )}
         </div>
         </div>
-        <QuestionListings type={'for-exam'} questions={elementTwoQuestions}/>
+        {/* <QuestionListings type={'for-exam'} questions={elementTwoQuestions}/> */}
         <div className="w-full flex items-center justify-center">
             <button 
               type="button"

@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Error404 from './pages/error404/Error404.tsx';
-import ReviewPage from './pages/review/review.tsx';
-import ExamPage from './pages/exam/exam.tsx';
+import ReviewPage from './pages/review/ReviewPage.tsx';
+import ExamPage from './pages/exam/ExampPage.tsx';
 import CheckScorePage from './pages/check-score/CheckScore.tsx';
 import Root from './components/layouts/RootLayout.tsx';
 import HomePage from './pages/home/home.tsx';
-import ElementPage from './pages/element/ElementPage.tsx';
+import ReviewerPage from './pages/reviewer/ReviewerPage.tsx';
 import { AnswerContextProvider } from './contexts/answer-context/AnswerContext.tsx';
 
 const router = createBrowserRouter([
@@ -22,18 +22,14 @@ const router = createBrowserRouter([
           element: <HomePage />,
         },
         {
-          path: "element",
+          path: "reviewer",
           children: [
             {
-              path: ':elementId',
+              path: ':reviewerId',
               children: [
                 {
                   path: "",
-                  element: <ElementPage />,
-                },
-                {
-                  path: "review",
-                  element: <ReviewPage />,
+                  element: <ReviewerPage />,
                 },
                 {
                   path: "review",

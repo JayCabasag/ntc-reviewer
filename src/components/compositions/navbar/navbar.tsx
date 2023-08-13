@@ -15,7 +15,7 @@ export default function Navbar() {
             </h1>
         </Link>
         <div className="flex gap-2 items-center">
-          <div className="hidden gap-2 md:flex">
+          <div className="hidden gap-2 md:hidden">
             <strong className="text-primary">Create an account</strong>
              or 
              <strong className="text-primary">Login</strong>

@@ -1,6 +1,12 @@
 [
     {
-        "element-2": [
+        "element-2": {
+          "id": 2,
+          "totalQuestions": 100,
+          "label": "NTC - Element 2",
+          "description": "Radio Rules and Regulations - Amateur Radio Examination Reviuwer for Class C",
+          "link": "element-2",
+          "questions": [
             {
                 "id": 1,
                 "question": "On November 11, 1931, what law did the Philippine Legislature enact which is known as the Radio Control Law of the Philippines?",
@@ -2302,5 +2308,6 @@
                 "correctAnswer": 3
               }
         ]
+        }
     }
 ]
