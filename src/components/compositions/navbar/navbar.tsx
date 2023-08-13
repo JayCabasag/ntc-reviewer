@@ -1,6 +1,6 @@
-import { AvatarIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
 import EloLogo from "../../assets/ELOLogo";
+import { NavbarUserMenu } from "./NavbarUserMenu";
 
 export default function Navbar() {
   return (
@@ -15,12 +15,7 @@ export default function Navbar() {
             </h1>
         </Link>
         <div className="flex gap-2 items-center">
-          <div className="hidden gap-2 md:hidden">
-            <strong className="text-primary">Create an account</strong>
-             or 
-             <strong className="text-primary">Login</strong>
-          </div>
-          <AvatarIcon className="h-8 w-8 text-primary cursor-pointer" />
+          <NavbarUserMenu />
         </div>
       </div>
     </header >
