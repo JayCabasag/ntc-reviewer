@@ -1,14 +1,16 @@
 import { AvatarIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
+import EloLogo from "../../assets/ELOLogo";
 
 export default function Navbar() {
   return (
     <header className="bg-white border-b sticky top-0 z-20 ">
       <div className="flex items-center justify-between mx-auto max-w-7xl px-6 h-[65px]">
         <Link to="/" className="cursor-pointer" >
-            <h1 className="flex no-underline">
+            <h1 className="flex no-underline items-center gap-2">
+              <EloLogo className="w-[35px] h-[35px] md:w-[50px] md:h-[50px]"/>
               <span className="text-xl text-primary font-primary font-extrabold tracking-tight pt-1">
-                Exam License Online
+                ELO
               </span>
             </h1>
         </Link>
@@ -18,7 +20,7 @@ export default function Navbar() {
              or 
              <strong className="text-primary">Login</strong>
           </div>
-          <AvatarIcon className="h-7 w-7 cursor-pointer" />
+          <AvatarIcon className="h-8 w-8 cursor-pointer" />
         </div>
       </div>
     </header >
