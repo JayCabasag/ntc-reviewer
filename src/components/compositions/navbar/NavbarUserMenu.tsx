@@ -1,61 +1,34 @@
-import * as React from "react"
+import { useState } from "react"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger
+} from "../../ui/Popover/Popover"
+import { AvatarIcon, ChevronDownIcon } from "@radix-ui/react-icons"
+ 
+   
+  export function NavbarUserMenu() {
+    const [openPopover, setOpenPopover] = useState(false)
 
-import { cn } from "../../../lib/utils"
-import { 
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
- } from "../../ui/NavigationMenu/NavigationMenu"
-import { AvatarIcon } from "@radix-ui/react-icons"
- 
-export function NavbarUserMenu() {
-  return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>
-            <AvatarIcon  className="h-7 w-7"/>
-          </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-white">
-            <ul className="grid gap-3 p-4 md:w-[300px] lg:w-[300px] lg:grid-cols-[1fr]">
-              <ListItem href="/docs" title="Account" />
-              <ListItem href="/docs/installation" title="Review History"/>
-              <ListItem href="/docs/primitives/typography" title="Logout"/>
+    return (
+      <Popover open={openPopover} onOpenChange={setOpenPopover}>
+      <PopoverTrigger>
+        <div className="flex items-center justify-center">
+        <AvatarIcon className="h-7 w-7" />
+        <ChevronDownIcon
+            className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180"
+            aria-hidden="true"
+            />
+        </div>
+      </PopoverTrigger>
+        <PopoverContent align="end" className="bg-white px-0 py-1">
+            <ul>
+                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100">Account</li>
+                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100">Review History</li>
+                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100">Logout</li>
             </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuIndicator />
-      </NavigationMenuList>
-    </NavigationMenu>
-  )
-}
+        </PopoverContent>
+      </Popover>
+    )
+  }
  
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"
