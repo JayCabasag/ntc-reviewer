@@ -14,7 +14,7 @@ const callToActions = [
     }
 ] as const
 
-export default function ElementPageCallToAction() {
+export default function ReviewerCallToAction() {
   return (
     <div className="mt-[20px] px-4 max-w-7xl w-full flex items-center justify-center flex-col">
     <div className="flex flex-col md:flex-row w-full max-w-sm px-[20px] gap-0 md:gap-4">

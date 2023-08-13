@@ -1,4 +1,4 @@
-export type Element = {
+export type Reviewer = {
     label: string,
     link: string,
     description: string
