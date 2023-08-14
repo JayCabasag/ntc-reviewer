@@ -1,6 +1,6 @@
 import * as React from 'react';
 import OnlineTestPanaSvg from '@/assets/online-test-pana.svg'
-import OnlineTestPanaSvgBg from '@/assets/Online test-pana-bg.svg'
+import OnlineTestPanaSvgBg from '@/assets/online-test-pana-bg.svg'
 import { ImageProps } from './types';
 
 const OnlineTestPanaImage = React.forwardRef<HTMLImageElement, ImageProps>(
