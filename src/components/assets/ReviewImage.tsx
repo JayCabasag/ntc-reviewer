@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReviewImageIcon from '../../assets/review-icon.svg'
+import ReviewImageIcon from '@/assets/review-icon.svg'
 import { ImageProps } from './types';
 
 export const ReviewImageAsset = React.forwardRef<HTMLImageElement, ImageProps>(

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Question } from "../../../utils/types"
+import { Question } from '@/utils/types'
 import { EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons'
 
 interface ComponentProps {

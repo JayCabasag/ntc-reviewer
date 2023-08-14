@@ -1,11 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
-import PageTitle from "../../components/compositions/home/PageTitle";
-import ReviewerList from "../../data.json"
-import QuestionListings from "../../components/compositions/questions/QuestionListings";
+import PageTitle from "@/components/compositions/home/PageTitle";
+import ReviewerList from "@/data.json"
+import QuestionListings from "@/components/compositions/questions/QuestionListings";
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import { useRef } from 'react'
-import { useCalculateScore, useExamStatus, useExamUpdateStatus, useRemoveAnswers, useScore } from "../../contexts/answer-context/context-hooks";
-import { Question } from "../../utils/types";
+import { useCalculateScore, useExamStatus, useExamUpdateStatus, useRemoveAnswers, useScore } from "@/contexts/answer-context/context-hooks";
+import { Question } from "@/utils/types";
 
 const reviewerListings: typeof ReviewerList = ReviewerList.flatMap(data => data)
 

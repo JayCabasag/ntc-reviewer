@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ExamLicenseOnlineLogo from '../../assets/exam-license-online.jpg'
+import ExamLicenseOnlineLogo from '@/assets/exam-license-online.jpg'
 import { ImageProps } from './types';
 
 export const EloLogo = React.forwardRef<HTMLImageElement, ImageProps>(

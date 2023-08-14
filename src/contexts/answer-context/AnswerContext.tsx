@@ -1,6 +1,6 @@
 
 import { createContext, ReactNode, useState } from 'react'
-import { AnsweredQuestion } from "../../utils/types"
+import { AnsweredQuestion } from '@/utils/types'
 
 export const AnswerContext = createContext<AnsweredQuestion[]>([])
 export const UpdateAnswerContext = createContext<(question: AnsweredQuestion) => void>(() => {})

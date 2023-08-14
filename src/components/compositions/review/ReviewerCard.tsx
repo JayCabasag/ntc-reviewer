@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import { Reviewer } from "../../../utils/types"
-import ReviewImageAsset from "../../assets/ReviewImage"
+import { Reviewer } from "@/utils/types"
+import ReviewImageAsset from "@/components/assets/ReviewImage"
 
 interface ComponentProps {
    reviewer: Reviewer

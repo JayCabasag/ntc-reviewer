@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
-import PageTitle from "../../components/compositions/home/PageTitle"
-import ReviewerCallToAction from "../../components/compositions/review/ReviewerCallToAction"
+import PageTitle from "@/components/compositions/home/PageTitle"
+import ReviewerCallToAction from "@/components/compositions/review/ReviewerCallToAction"
 
 export default function ReviewerPage() {
   const { reviewerId  } = useParams()

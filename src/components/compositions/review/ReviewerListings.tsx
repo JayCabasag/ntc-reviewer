@@ -1,5 +1,5 @@
 import ReviewerCard from "./ReviewerCard"
-import ReviewerList from "../../../data.json"
+import ReviewerList from "@/data.json"
 
 export default function ReviewerListings() {
 

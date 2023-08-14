@@ -1,8 +1,7 @@
-import { AnsweredQuestion, Question } from "../../../utils/types"
+import { AnsweredQuestion, Question } from '@/utils/types'
 import { useState, memo } from 'react'
 import { EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons'
-import { useAnswers, useExamStatus, useUpdateAnswers } from "../../../contexts/answer-context/context-hooks"
-
+import { useAnswers, useExamStatus, useUpdateAnswers } from '@/contexts/answer-context/context-hooks'
 interface ComponentProps {
     props: Question
 }

@@ -1,9 +1,5 @@
 import { useState } from "react"
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger
-} from "../../ui/Popover/Popover"
+import { Popover, PopoverTrigger, PopoverContent} from "@/components/ui/Popover/Popover"
 import { AvatarIcon } from "@radix-ui/react-icons"
  
    
@@ -14,14 +10,14 @@ import { AvatarIcon } from "@radix-ui/react-icons"
       <Popover open={openPopover} onOpenChange={setOpenPopover}>
       <PopoverTrigger>
         <div className="flex items-center justify-center">
-        <AvatarIcon className="h-7 w-7" />
+        <AvatarIcon className="h-8 w-8" />
         </div>
       </PopoverTrigger>
-        <PopoverContent align="end" className="bg-white px-0 py-1">
+        <PopoverContent align="end" className="bg-white px-0 py-2">
             <ul>
-                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100">Account</li>
-                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100">Review History</li>
-                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100">Logout</li>
+                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100 text-[12px] md:text-base text-gray-600">Account</li>
+                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100 text-[12px] md:text-base text-gray-600">Review History</li>
+                <li className="py-2 px-3 cursor-pointer hover:bg-slate-100 text-[12px] md:text-base text-gray-600">Logout</li>
             </ul>
         </PopoverContent>
       </Popover>

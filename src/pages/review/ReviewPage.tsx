@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
-import PageTitle from "../../components/compositions/home/PageTitle";
-import ReviewerList from "../../data.json"
-import { Question } from "../../utils/types";
-import QuestionListings from "../../components/compositions/questions/QuestionListings";
+import PageTitle from "@/components/compositions/home/PageTitle";
+import ReviewerList from "@/data.json"
+import { Question } from "@/utils/types";
+import QuestionListings from "@/components/compositions/questions/QuestionListings";
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 
 

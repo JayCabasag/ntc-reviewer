@@ -1,6 +1,6 @@
-// import CategoryListings from '../../components/compositions/categories/CategoryListings'
-import ReviewerListings from '../../components/compositions/review/ReviewerListings'
-import HomeHeading from '../../components/compositions/home/HomeHeading'
+// import CategoryListings from '@/components/compositions/categories/CategoryListings'
+import ReviewerListings from '@/components/compositions/review/ReviewerListings'
+import HomeHeading from '@/components/compositions/home/HomeHeading'
 
 export default function HomePage() {
   return (

@@ -1,4 +1,4 @@
-import { Question } from '../../../utils/types'
+import { Question } from '@/utils/types'
 import QuestionCardExam from './QuestionCardExam'
 import QuestionCardReview from './QuestionCardReview'
 
