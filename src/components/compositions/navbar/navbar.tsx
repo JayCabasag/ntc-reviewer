@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import EloLogo from "@/components/assets/ELOLogo";
+import Button from "@/components/ui/button/Button";
 // import { NavbarUserMenu } from "./NavbarUserMenu";
 
 export default function Navbar() {
@@ -15,6 +16,8 @@ export default function Navbar() {
             </h1>
         </Link>
         <div className="flex gap-2 items-center">
+          <Button variant='outline'>Sign in</Button>
+          <Button className="text-white">Sign up</Button>
           {/* <NavbarUserMenu /> */}
         </div>
       </div>

@@ -38,7 +38,7 @@ export default function ExamPage() {
 
   return (
       <div className="flex justify-center items-center flex-col gap-2 pt-[30px]">
-        <PageTitle text={`${reviewerId} Exam`} />
+        <PageTitle text={`${reviewerData?.label} Exam`} />
         <div ref={topRef}></div>
         <div className="w-full max-w-7xl">
         <button
