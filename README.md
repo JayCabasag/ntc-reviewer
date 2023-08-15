@@ -1,27 +1,65 @@
-# React + TypeScript + Vite
+# NTC Reviewer
+Brief description of your app.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
 
-## Expanding the ESLint configuration
+A brief introduction to your app. What does it do? What problem does it solve?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+List some key features or functionalities of your app.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- Feature 1
+- Feature 2
+- ...
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+
+Provide step-by-step instructions on how to set up and run your app locally. Make sure to include any prerequisites or dependencies that need to be installed.
+
+1. Clone this repository: `git clone https://github.com/your-username/your-repo.git`
+2. Navigate to the project directory: `cd your-repo`
+3. Install dependencies: `npm install` or `yarn install`
+4. Start the development server: `npm run dev` or `yarn dev`
+5. Open your browser and go to `http://localhost:3000`
+
+## Usage
+
+Explain how to use your app. You can include screenshots, code examples, or even GIFs to demonstrate its functionality.
+
+## Technologies Used
+
+List the technologies, frameworks, and libraries you used to build your app. For example:
+
+- Vite
+- TypeScript
+- React
+- React Router DOM v6
+
+## Contributing
+
+If you'd like to contribute to this project, you can follow these steps:
+
+1. Fork this repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit them: `git commit -m "Add your changes"`
+4. Push the changes to your forked repository: `git push origin feature/your-feature-name`
+5. Create a pull request in this repository.
+
+Please make sure to follow the code of conduct and guidelines outlined in CONTRIBUTING.md.
+
+## License
+
+Indicate the license under which your app is distributed. For example:
+
+This project is licensed under the [MIT License](LICENSE).
