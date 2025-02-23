@@ -1,24 +1,25 @@
 export type Reviewer = {
-    id: number,
-    label: string,
-    link: string,
-    description: string
-}
+  id: number;
+  label: string;
+  link: string;
+  description: string;
+  questions: Question[];
+};
 
 export type QuestionOption = {
-    id: number,
-    label: string
-}
+  id: number;
+  label: string;
+};
 
 export type Question = {
-    id: number,
-    question: string,
-    options: QuestionOption[],
-    correctAnswer: number
-}
+  id: number;
+  question: string;
+  options: QuestionOption[];
+  correctAnswer: number;
+};
 
 export type AnsweredQuestion = {
-    userAnswer: number
-} & Question
+  userAnswer: number;
+} & Question;
 
-export type ExamStatus = 'in-progress' | 'submitted'
+export type ExamStatus = "in-progress" | "submitted";

@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "totalQuestions": 100,
+  "label": "TDC",
+  "description": "Theoritecal Driving Course",
+  "link": "",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Throwing candy wrappers, or anything from your vehicle is:",
+      "options": [
+        {
+          "id": 1,
+          "label": "forbidden at all times"
+        },
+        {
+          "id": 2,
+          "label": "forbidden only in the province"
+        },
+        {
+          "id": 3,
+          "label": "Forbidden only in the cities"
+        }
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
